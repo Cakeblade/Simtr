@@ -44,13 +44,13 @@
     "appId": "com.example.simtr",
     "productName": "Simtr",
     "directories": {
-      "output": "build/output/release",
+      "output": "dist_electron",
       "buildResources": "build"
     },
     "files": [
-      "build/output/electron/main.js",
-      "build/output/electron/preload.mjs",
-      "build/output/web/**/*",
+      "dist-electron/main.js",
+      "dist-electron/preload.mjs",
+      "dist/**/*",
       "node_modules/**/*"
     ],
     "extraResources": [
@@ -64,5 +64,5 @@
       "icon": "build/icon.ico"
     }
   },
-  "main": "build/output/electron/main.js"
+  "main": "build/output/dist-electron/main.js"
 }

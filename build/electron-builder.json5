@@ -1,15 +1,24 @@
-// @see - https://www.electron.build/configuration/configuration
 {
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
   "appId": "com.example.simtr",
   "asar": true,
   "productName": "Simtr",
   "directories": {
-    "output": "../build/output/release/${version}"
+    "buildResources": "build",
+    "output": "build/output/release"
   },
   "files": [
-    "../build/output/web",
-    "../build/output/electron"
+    "build/output/dist-electron/main.js",
+    "build/output/dist-electron/preload.mjs",
+    "build/output/dist/**/*",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "extraFiles": [
+    {
+      "from": ".env",
+      "to": ".env"
+    }
   ],
   "mac": {
     "target": [
@@ -40,4 +49,4 @@
     ],
     "artifactName": "${productName}-Linux-${version}.${ext}"
   }
-}
+} 

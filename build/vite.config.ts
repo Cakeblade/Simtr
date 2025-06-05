@@ -12,7 +12,7 @@ export default defineConfig({
         entry: path.resolve(__dirname, '../electron/main.ts'),
         vite: {
           build: {
-            outDir: path.resolve(__dirname, './output/electron'),
+            outDir: path.resolve(__dirname, 'output/dist-electron'),
           },
         },
       },
@@ -22,7 +22,7 @@ export default defineConfig({
         input: path.resolve(__dirname, '../electron/preload.ts'),
         vite: {
           build: {
-            outDir: path.resolve(__dirname, './output/electron'),
+            outDir: path.resolve(__dirname, 'output/dist-electron'),
           },
         },
       },
@@ -37,8 +37,7 @@ export default defineConfig({
   ],
   root: path.resolve(__dirname, '..'),
   build: {
-    outDir: 'build/output/web',
-    emptyOutDir: true,
+    outDir: 'build/output/dist',
   },
   server: {
     port: 59771,
